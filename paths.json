@@ -1,0 +1,10 @@
+{
+  "mappings": [
+    "/content/myfirsteds/:/",
+    "/content/myfirsteds/configuration:/.helix/config.json",
+    "/content/myfirsteds/metadata:/metadata.json"
+  ],
+  "includes": [
+    "/content/myfirsteds/"
+  ]
+}

@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: 'https://author-p7906-e1488805.adobeaemcloud.com/bin/franklin.delivery/yjoon45/myfirsteds/main'
+    type: 'markup'
+    suffix: '.html'

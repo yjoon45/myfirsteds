@@ -1106,60 +1106,145 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
 /* Start: opaf care connect page faq section */
 
 .opaf-care-connect-faq {
-  padding-top: 70px;
-  padding-bottom: 48px;
-}
+  padding: 70px 17px 48px;
 
-.opaf-care-connect-faq>.default-content-wrapper>* {
-  color: white;
-  text-align: center;
-  font-size: 48px;
-  margin: 0 0 50px;
-}
+  @media (width > 992px) {
+    padding-inline: 0;
+  }
 
-.opaf-care-connect-faq > .columns-wrapper {
-  max-width: 1050px;
-}
+  & > .default-content-wrapper > * {
+    color: white;
+    font-size: 32px;
+    margin: 0 0 30px;
+    text-align: center;
 
-.opaf-care-connect-faq .columns>div {
-  align-items: stretch;
-}
+    @media (width > 992px) {
+      font-size: 48px;
+      margin: 0 0 50px;
 
-.opaf-care-connect-faq .columns>div>div {
-  padding: 40px 48px 105px;
-  border-radius: 12px;
-}
+    }
+  }
 
-.opaf-care-connect-faq .columns>div>div:first-child {
-  background: var(--bg-color-white);
-}
+  & > .columns-wrapper {
+    max-width: 1050px;
+  }
+  
+  .columns > div {
+    gap: 32px;
 
-.opaf-care-connect-faq .columns>div>div:last-child {
-  background: var(--bg-color-blue);
-  color: white;
-}
+    @media (width > 992px) {
+      align-items: stretch;
+      gap: 24px;
+    }
+  }
 
-.opaf-care-connect-faq .columns>div>div>h4 {
-  letter-spacing: .2px;
-  margin-block: 9px 23px;
-  padding-right: 90px;
-  font-size: 20px;
-  line-height: 1.4em;
-  font-weight: 600;
-  color: var(--supported-brand-text);
-}
+  .columns > div > div {
+    padding: 24px 32px;
+    border-radius: 12px;
 
-.opaf-care-connect-faq .columns>div>div>h3 {
-  font-size: 32px;
-  padding-right: 100px;
-  margin: 0 0 16px;
-  line-height: 1.2em;
-}
+    @media (width > 992px) {
+      display: flex;
+      padding: 40px 48px;
+      flex-direction: column;
+    }
+  }
 
-.opaf-care-connect-faq .columns>div>div>p {
-  margin: 0 0 17px;
-  font-size: 14px;
-  line-height: 1.6em;
+  .columns>div>div {
+    &:first-child {
+      background: var(--bg-color-white);
+    }
+
+    &:last-child {
+      background: var(--bg-color-blue);
+      color: white;
+    }
+
+     h4 {
+      letter-spacing: .2px;
+      margin-block: 0 23px;
+      font-size: 20px;
+      line-height: 1.4em;
+      font-weight: 600;
+      color: var(--supported-brand-text);
+
+      @media (width > 992px) {
+        padding-right: 90px;
+      }
+    }
+
+    h3 {
+      font-size: 20px;
+      margin: 0 0 16px;
+      line-height: 1.2em;
+
+      @media (width > 992px) {
+        font-size: 32px;
+        padding-right: 100px;
+      }
+    }
+
+    p {
+      margin: 0 0 17px;
+      font-size: 14px;
+      line-height: 1.6em;
+    }
+
+    .button-container {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
+
+    .button-container > a {
+      padding: 0 25px;
+      margin: 0;
+      height: 39.5px;
+      display: flex;
+      align-items: center;
+      justify-content:center;
+      gap: 8px;
+      width: 100%;
+      background-color: #426bba;
+      font-size: 14px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition:
+        background-color .25s cubic-bezier(0.4, 0, 0.2, 1),
+        color .25s cubic-bezier(0.4, 0, 0.2, 1);
+
+      & > .icon {
+        width: 20px;
+        height: 20px;
+        padding: 3px;
+
+        @media (width < 992px) {
+          transform: rotate(90deg);
+        }
+      }
+
+      @media (width > 992px) {
+        height: 49.5px;
+        width: fit-content;
+      }
+    }
+
+    &:last-child .button-container > a {
+      background-color: white;
+      color: var(--supported-brand-text);
+
+      &:is(:hover, :focus) {
+        color: white;
+      }
+    }
+
+    .button-container > a:is(:hover, :focus) {
+      background-color: var(--supported-brand-text);
+    }
+
+    &:first-child .button-container>a>.icon,
+    &:last-child .button-container>a:hover>.icon {
+      filter: brightness(0) invert(1);
+    }
+  }
 }
 
 /* End: opaf care connect page faq section */

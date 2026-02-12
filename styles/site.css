@@ -1101,3 +1101,65 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
 }
 
 /* End: Are you a patient Section Styles */
+
+
+/* Start: opaf care connect page faq section */
+
+.opaf-care-connect-faq {
+  padding-top: 70px;
+  padding-bottom: 48px;
+}
+
+.opaf-care-connect-faq>.default-content-wrapper>* {
+  color: white;
+  text-align: center;
+  font-size: 48px;
+  margin: 0 0 50px;
+}
+
+.opaf-care-connect-faq > .columns-wrapper {
+  max-width: 1050px;
+}
+
+.opaf-care-connect-faq .columns>div {
+  align-items: stretch;
+}
+
+.opaf-care-connect-faq .columns>div>div {
+  padding: 40px 48px 105px;
+  border-radius: 12px;
+}
+
+.opaf-care-connect-faq .columns>div>div:first-child {
+  background: var(--bg-color-white);
+}
+
+.opaf-care-connect-faq .columns>div>div:last-child {
+  background: var(--bg-color-blue);
+  color: white;
+}
+
+.opaf-care-connect-faq .columns>div>div>h4 {
+  letter-spacing: .2px;
+  margin-block: 9px 23px;
+  padding-right: 90px;
+  font-size: 20px;
+  line-height: 1.4em;
+  font-weight: 600;
+  color: var(--supported-brand-text);
+}
+
+.opaf-care-connect-faq .columns>div>div>h3 {
+  font-size: 32px;
+  padding-right: 100px;
+  margin: 0 0 16px;
+  line-height: 1.2em;
+}
+
+.opaf-care-connect-faq .columns>div>div>p {
+  margin: 0 0 17px;
+  font-size: 14px;
+  line-height: 1.6em;
+}
+
+/* End: opaf care connect page faq section */

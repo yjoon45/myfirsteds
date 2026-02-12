@@ -26,6 +26,12 @@
           "description": "The label shown for this section in the Content Tree"
         },
         {
+          "component": "text",
+          "name": "id",
+          "label": "Section ID",
+          "description": "Provide Section ID"
+        },
+        {
           "component": "multiselect",
           "name": "style",
           "label": "Style",
@@ -108,6 +114,10 @@
             {
               "name": "OPAF Care Connect",
               "value": "opaf-care-connect"
+            },
+            {
+              "name": "OPAF Care Connect (FAQ)",
+              "value": "opaf-care-connect-faq"
             },
             {
                 "name": "Inline",

@@ -535,6 +535,17 @@
     ]
   },
   {
+    "id": "download-cards",
+    "fields": [
+      {
+        "component": "text",
+        "name": "classes",
+        "label": "Classes",
+        "value": "mycard"
+      }
+    ]
+  },
+  {
     "id": "download-card",
     "fields": [
       {
@@ -576,6 +587,21 @@
           {
             "name": "White Button download",
             "value": "white-button-download"
+          }
+        ]
+      },
+      {
+        "component": "select",
+        "name": "cta_wraplink",
+        "label": "Wrap with link tag",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "true"
+          },
+          {
+            "name": "No",
+            "value": "false"
           }
         ]
       }

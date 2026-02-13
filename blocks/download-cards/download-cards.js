@@ -13,10 +13,12 @@ export default function decorate(block) {
 
   const itemRows = rows.slice(0);
   itemRows.forEach((row) => {
-    const [, contentdiv, buttondiv] = [...row.children];
+    const [, , contentdiv, buttondiv] = [...row.children];
     // const _Image = imagediv.querySelector('picture');
     const Title = contentdiv.querySelector('p');
     const buttoncell = buttondiv.querySelectorAll(':scope > p');
+    const wrapValue = buttondiv.querySelector('p:last-child');
+    const isWrapWithLink = (wrapValue?.textContent || '') === 'true';
 
     // Only process if we have at least 3 paragraph cells (link, text, style)
     if (buttoncell.length >= 3) {
@@ -29,16 +31,20 @@ export default function decorate(block) {
       buttonwrap.href = buttonlink;
       buttonwrap.textContent = buttontext;
       buttonwrap.className = `button ${buttonstyle}`;
-
-      // Clear the button div and append the new anchor
       buttondiv.innerHTML = '';
-      const anchorwrap = document.createElement('a');
-      anchorwrap.href = buttonlink;
-      anchorwrap.className = 'card-link';
-      anchorwrap.appendChild(Title);
-      anchorwrap.appendChild(buttonwrap);
-      row.innerHTML = '';
-      row.appendChild(anchorwrap);
+
+      if (isWrapWithLink) {
+        // Clear the button div and append the new anchor
+        const anchorwrap = document.createElement('a');
+        anchorwrap.href = buttonlink;
+        anchorwrap.className = 'card-link';
+        anchorwrap.appendChild(Title);
+        anchorwrap.appendChild(buttonwrap);
+        row.innerHTML = '';
+        row.appendChild(anchorwrap);
+      } else {
+        row.appendChild(buttonwrap);
+      }
     }
   });
 }

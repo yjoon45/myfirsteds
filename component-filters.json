@@ -81,6 +81,12 @@
     ]
   },
   {
+    "id": "download-cards",
+    "components": [
+      "download-card"
+    ]
+  },
+  {
     "id": "flip-cards",
     "components": [
       "flip-card"

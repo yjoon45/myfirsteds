@@ -1,0 +1,157 @@
+:root{
+  --download-card-bg: #fff; 
+  --download-card-text: #383d41; 
+  --download-card-button-bg: #fff; 
+  --download-card-button-text: #426bba; 
+  --download-card-family: 'Museo Sans', sans-serif;
+} 
+ 
+.download-cards-container {
+  padding: 2.5rem 2rem;
+}
+
+.download-cards {
+     display: flex;
+    flex-wrap: wrap;
+      gap: 2rem;
+  margin: -15px;
+}
+
+
+.download-cards > div {
+  width: 100%;
+}
+
+
+.download-cards > div a {
+  display: block;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  background: var(--download-card-bg);
+  font-size: 0.875rem;
+  font-weight: 600;
+    line-height: 1.4375rem;
+    letter-spacing: 0;
+    position: relative;
+    text-decoration: none;
+}
+
+.download-cards-wrapper .download-cards > div > a > a {
+margin:0;
+font-family: var(--download-card-family);
+}
+
+
+
+.download-cards-wrapper .download-cards > div > a p {
+  margin: 0;  
+  color: var(--download-card-text);
+    margin-bottom: 1.25rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+} 
+
+@media (width >= 375px) {
+.download-cards-wrapper .download-cards > div > a p{
+    max-width: 202px;
+}
+
+}
+
+
+@media (width >= 768px) {
+.download-cards-wrapper .download-cards > div > a p{
+    max-width: 400px;
+}
+
+}
+
+
+@media (width >= 992px) {
+  .download-cards-wrapper .download-cards > div > a p{
+    max-width: unset;
+}
+
+.download-cards-container {
+  padding: 0;
+}
+
+.download-cards > div a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  background: var(--download-card-bg);
+  font-size: 0.875rem;
+  line-height: 1.4rem;
+}
+
+    .download-cards{
+        max-width: 702px;
+        margin: 0 auto;
+    }
+
+   .download-cards-wrapper .download-cards > div > a p{
+    max-width: 390px;
+    margin: 0;
+    }
+}
+
+
+/* white download button */
+ a.button.white-button-download {
+  display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 3.125rem 0.5rem 2.25rem;
+    color: var(--download-card-button-text);
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4375rem;
+    letter-spacing: 0;
+    position: relative;
+    background: none;
+    border: 1.4px solid var(--download-card-button-text);
+    text-transform: none;
+    transition: background-color .25s cubic-bezier(0.4, 0, 0.2, 1), color .25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a.button.white-button-download::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 16px;
+    margin-left: 8px;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 8px);
+    background-image: url("/icons/arrow-small-blue-down.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.download-cards > div > a:hover a.button.white-button-download, a.button.white-button-download:hover{
+    color: var(--download-card-bg);
+    background: var(--download-card-button-text);
+    border-color: var(--download-card-button-text);
+    padding: 0.5rem 3.125rem 0.5rem 2.25rem;
+    text-align: center;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 1.4375rem;
+    letter-spacing: 0;
+    position: relative;
+    
+}
+
+download-cards > div > a:hover a.button.white-button-download::after, a.button.white-button-download:hover::after{
+    background-image: url("/icons/download.svg");
+}

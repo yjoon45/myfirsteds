@@ -83,9 +83,7 @@
   "filters": [
     {
       "id": "download-cards",
-      "components": [
-        "download-card"
-      ]
+      "components": ["download-card"]
     }
   ]
 }

@@ -1,7 +1,7 @@
 export default function decorate(block) {
   const rows = [...block.children];
   const Strong = block.querySelectorAll('strong');
-  
+
   // Wrap all children of strong elements inside <nobr>
   Strong.forEach((strongElement) => {
     const nobreak = document.createElement('nobr');
@@ -10,11 +10,11 @@ export default function decorate(block) {
     }
     strongElement.appendChild(nobreak);
   });
-  
+
   const itemRows = rows.slice(0);
   itemRows.forEach((row) => {
-    const [imagediv, contentdiv, buttondiv] = [...row.children];
-    const Image = imagediv.querySelector('picture');
+    const [, contentdiv, buttondiv] = [...row.children];
+    // const _Image = imagediv.querySelector('picture');
     const Title = contentdiv.querySelector('p');
     const buttoncell = buttondiv.querySelectorAll(':scope > p');
 

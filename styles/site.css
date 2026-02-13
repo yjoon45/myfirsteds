@@ -1106,10 +1106,10 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
 /* Start: opaf care connect page faq section */
 
 .opaf-care-connect-faq {
-  padding: 70px 17px 48px;
+  padding: 57px 17px 32px;
 
   @media (width > 992px) {
-    padding-inline: 0;
+    padding: 70px 0 48px;
   }
 
   & > .default-content-wrapper > * {
@@ -1121,18 +1121,17 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
     @media (width > 992px) {
       font-size: 48px;
       margin: 0 0 50px;
-
     }
   }
 
   & > .columns-wrapper {
     max-width: 1050px;
   }
-  
+
   .columns > div {
     gap: 32px;
 
-    @media (width > 992px) {
+    @media (width > 768px) {
       align-items: stretch;
       gap: 24px;
     }
@@ -1142,14 +1141,14 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
     padding: 24px 32px;
     border-radius: 12px;
 
-    @media (width > 992px) {
+    @media (width > 768px) {
       display: flex;
       padding: 40px 48px;
       flex-direction: column;
     }
   }
 
-  .columns>div>div {
+  .columns > div > div {
     &:first-child {
       background: var(--bg-color-white);
     }
@@ -1159,8 +1158,8 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
       color: white;
     }
 
-     h4 {
-      letter-spacing: .2px;
+    h4 {
+      letter-spacing: 0.2px;
       margin-block: 0 23px;
       font-size: 20px;
       line-height: 1.4em;
@@ -1200,7 +1199,7 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
       height: 39.5px;
       display: flex;
       align-items: center;
-      justify-content:center;
+      justify-content: center;
       gap: 8px;
       width: 100%;
       background-color: #426bba;
@@ -1208,8 +1207,8 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
       font-weight: 700;
       text-transform: uppercase;
       transition:
-        background-color .25s cubic-bezier(0.4, 0, 0.2, 1),
-        color .25s cubic-bezier(0.4, 0, 0.2, 1);
+        background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+        color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
       & > .icon {
         width: 20px;
@@ -1240,8 +1239,8 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
       background-color: var(--supported-brand-text);
     }
 
-    &:first-child .button-container>a>.icon,
-    &:last-child .button-container>a:hover>.icon {
+    &:first-child .button-container > a > .icon,
+    &:last-child .button-container > a:hover > .icon {
       filter: brightness(0) invert(1);
     }
   }

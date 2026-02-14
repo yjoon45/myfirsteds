@@ -62,6 +62,11 @@
         "description": "The label shown for this section in the Content Tree"
       },
       {
+        "component": "text",
+        "label": "Padding",
+        "name": "padding"
+      },
+      {
         "component": "multiselect",
         "name": "style",
         "label": "Style",

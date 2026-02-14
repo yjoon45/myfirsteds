@@ -1105,13 +1105,16 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
 
 /* Start: opaf care connect page faq section */
 
-.opaf-care-connect-faq {
+.fragment-container:has(.opaf-care-connect-faq) {
+  background-color: var(--bg-color-light-blue);
   padding: 57px 17px 32px;
 
   @media (width > 992px) {
     padding: 70px 0 48px;
   }
+}
 
+.opaf-care-connect-faq {
   & > .default-content-wrapper > * {
     color: white;
     font-size: 32px;
@@ -1124,12 +1127,14 @@ body.opaf-care-connect-home .section.are-you-a-patient-right-section .otsuka-but
     }
   }
 
-  & > .columns-wrapper {
+  & > .download-cards-wrapper {
     max-width: 1050px;
+    margin-inline: auto;
   }
 
-  .columns > div {
+  .download-cards {
     gap: 32px;
+    max-width: unset;
 
     @media (width > 768px) {
       align-items: stretch;

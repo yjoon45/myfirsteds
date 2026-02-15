@@ -85,6 +85,14 @@
             {
               "name": "White Button download",
               "value": "white-button-download"
+            },
+            {
+              "name": "Button rounded blue",
+              "value": "button-rounded-blue"
+            },
+            {
+              "name": "Button rounded white",
+              "value": "button-rounded-white"
             }
           ]
         },
@@ -100,6 +108,25 @@
             {
               "name": "No",
               "value": "false"
+            }
+          ]
+        },
+        {
+          "component": "select",
+          "name": "classes",
+          "label": "Variants",
+          "options": [
+            {
+              "name": "Default",
+              "value": ""
+            },
+            {
+              "name": "Care connect faq Card (White)",
+              "value": "care-connect-faq-card-white"
+            },
+            {
+              "name": "Care connect faq Card (Blue)",
+              "value": "care-connect-faq-card-blue"
             }
           ]
         }

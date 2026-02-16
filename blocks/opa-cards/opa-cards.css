@@ -249,7 +249,7 @@ a.button.white-button-download::after {
 /* End: OPA Info Card  */
 
 /* Start: care connect faq */
-.opa-card[class*='care-connect-faq-card-'] {
+.opa-cards div[class*='care-connect-faq-card-'] {
   padding: 24px 32px;
   border-radius: 12px;
   background-color: var(--bg-color-white);

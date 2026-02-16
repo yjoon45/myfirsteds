@@ -28,7 +28,7 @@ export default function decorate(block) {
       divwrap.appendChild(Title);
       row.innerHTML = '';
       block.after(divwrap);
-    } else if (cardtype === 'white-button-download') {
+    } else {
       const Image = imagediv.querySelector('picture');
       const Title = contentdiv.querySelector('p');
       const buttoncell = buttondiv.querySelectorAll(':scope > p');
@@ -58,7 +58,7 @@ export default function decorate(block) {
         row.innerHTML = '';
         row.appendChild(anchorwrap);
       }
-    } else {
+
       carddiv.parentNode.classList.add(cardtype);
       carddiv.innerHTML = '';
     }

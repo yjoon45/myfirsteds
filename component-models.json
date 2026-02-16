@@ -937,6 +937,21 @@
             "value": "button-rounded-white"
           }
         ]
+      },
+      {
+        "component": "select",
+        "name": "wrap_withlink",
+        "label": "Wrap with link",
+        "options": [
+          {
+            "name": "Yes",
+            "value": "true"
+          },
+          {
+            "name": "No",
+            "value": "false"
+          }
+        ]
       }
     ]
   },

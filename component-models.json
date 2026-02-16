@@ -147,10 +147,6 @@
             "value": "opaf-care-connect"
           },
           {
-            "name": "OPAF Care Connect (FAQ)",
-            "value": "opaf-care-connect-faq"
-          },
-          {
             "name": "Inline",
             "value": "inline"
           },
@@ -193,6 +189,18 @@
           {
             "name": " Are you a patient right section",
             "value": "are-you-a-patient-right-section"
+          },
+          {
+            "name": "Patient Forms",
+            "value": "patient-forms"
+          },
+          {
+            "name": "Want To Apply Online Left Section",
+            "value": "want-to-apply-online-left-section"
+          },
+          {
+            "name": "Want To Apply Online Right Section",
+            "value": "want-to-apply-online-right-section"
           }
         ]
       }
@@ -535,106 +543,6 @@
     ]
   },
   {
-    "id": "download-cards",
-    "fields": [
-      {
-        "component": "text",
-        "name": "classes",
-        "label": "Classes",
-        "value": "mycard"
-      }
-    ]
-  },
-  {
-    "id": "download-card",
-    "fields": [
-      {
-        "component": "reference",
-        "valueType": "string",
-        "name": "image",
-        "label": "Image",
-        "multi": false
-      },
-      {
-        "component": "richtext",
-        "name": "heading",
-        "value": "",
-        "label": "Heading",
-        "valueType": "string"
-      },
-      {
-        "component": "richtext",
-        "name": "text",
-        "value": "",
-        "label": "Text",
-        "valueType": "string"
-      },
-      {
-        "component": "aem-content",
-        "name": "cta_link",
-        "label": "Link"
-      },
-      {
-        "component": "text",
-        "name": "cta_text",
-        "label": "Button Text"
-      },
-      {
-        "component": "select",
-        "name": "cta_style",
-        "label": "Button Style",
-        "options": [
-          {
-            "name": "White Button download",
-            "value": "white-button-download"
-          },
-          {
-            "name": "Button rounded blue",
-            "value": "button-rounded-blue"
-          },
-          {
-            "name": "Button rounded white",
-            "value": "button-rounded-white"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "cta_wraplink",
-        "label": "Wrap with link tag",
-        "options": [
-          {
-            "name": "Yes",
-            "value": "true"
-          },
-          {
-            "name": "No",
-            "value": "false"
-          }
-        ]
-      },
-      {
-        "component": "select",
-        "name": "classes",
-        "label": "Variants",
-        "options": [
-          {
-            "name": "Default",
-            "value": ""
-          },
-          {
-            "name": "Care connect faq Card (White)",
-            "value": "care-connect-faq-card-white"
-          },
-          {
-            "name": "Care connect faq Card (Blue)",
-            "value": "care-connect-faq-card-blue"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "id": "eligibility-wizard",
     "fields": [
       {
@@ -774,6 +682,71 @@
     ]
   },
   {
+    "id": "hero-banner",
+    "fields": [
+      {
+        "component": "richtext",
+        "valueType": "string",
+        "name": "content",
+        "label": "Content",
+        "description": "Content to be displayed"
+      },
+      {
+        "component": "text",
+        "valueType": "string",
+        "name": "button_text",
+        "label": "Button Text",
+        "description": "Text displayed on the button"
+      },
+      {
+        "component": "aem-content",
+        "valueType": "string",
+        "name": "button_link",
+        "label": "Button Link",
+        "description": "URL for the button"
+      },
+      {
+        "component": "select",
+        "name": "button_target",
+        "label": "Button Target",
+        "description": "Button link target",
+        "options": [
+          {
+            "name": "_self",
+            "value": "_self"
+          },
+          {
+            "name": "_blank",
+            "value": "_blank"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "button_icon",
+        "label": "Button Icon",
+        "description": "Icon displayed on the button (arrow icon)",
+        "required": false
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_desktop",
+        "label": "Image Desktop",
+        "description": "Image displayed on desktop view (right side)"
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image_mobile",
+        "label": "Image Mobile",
+        "description": "Image displayed on mobile view",
+        "required": false
+      }
+    ]
+  },
+  {
     "id": "hero",
     "fields": [
       {
@@ -896,14 +869,24 @@
             "value": "text-only"
           },
           {
-            "name": "White Button download",
+            "name": "Text & Button",
             "value": "white-button-download"
           },
           {
             "name": "Info Card",
             "value": "opa-info-card"
+          },
+          {
+            "name": "Care connect faq Card (White)",
+            "value": "care-connect-faq-card-white"
+          },
+          {
+            "name": "Care connect faq Card (Blue)",
+            "value": "care-connect-faq-card-blue"
           }
-        ]
+        ],
+        "valueType": "string",
+        "required": true
       },
       {
         "component": "reference",
@@ -911,6 +894,13 @@
         "name": "image",
         "label": "Image",
         "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "heading",
+        "value": "",
+        "label": "Heading",
+        "valueType": "string"
       },
       {
         "component": "richtext",
@@ -937,6 +927,14 @@
           {
             "name": "White Button download",
             "value": "white-button-download"
+          },
+          {
+            "name": "Button rounded blue",
+            "value": "button-rounded-blue"
+          },
+          {
+            "name": "Button rounded white",
+            "value": "button-rounded-white"
           }
         ]
       }
@@ -1514,10 +1512,6 @@
           {
             "name": "h6",
             "value": "h6"
-          },
-          {
-            "name": "h7",
-            "value": "h7"
           }
         ]
       }

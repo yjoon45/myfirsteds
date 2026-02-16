@@ -45,14 +45,24 @@
               "value": "text-only"
             },
             {
-              "name": "White Button download",
+              "name": "Text & Button",
               "value": "white-button-download"
             },
             {
               "name": "Info Card",
               "value": "opa-info-card"
+            },
+            {
+              "name": "Care connect faq Card (White)",
+              "value": "care-connect-faq-card-white"
+            },
+            {
+              "name": "Care connect faq Card (Blue)",
+              "value": "care-connect-faq-card-blue"
             }
-          ]
+          ],
+          "valueType": "string",
+          "required": true
         },
         {
           "component": "reference",
@@ -60,7 +70,14 @@
           "name": "image",
           "label": "Image",
           "multi": false
-        } ,
+        },
+        {
+          "component": "richtext",
+          "name": "heading",
+          "value": "",
+          "label": "Heading",
+          "valueType": "string"
+        },
         {
           "component": "richtext",
           "name": "text",
@@ -86,6 +103,14 @@
             {
               "name": "White Button download",
               "value": "white-button-download"
+            },
+            {
+              "name": "Button rounded blue",
+              "value": "button-rounded-blue"
+            },
+            {
+              "name": "Button rounded white",
+              "value": "button-rounded-white"
             }
           ]
         }
@@ -96,8 +121,7 @@
     {
       "id": "opa-cards",
       "components": [
-        "opa-card",
-        "otsuka-button"
+        "opa-card"
       ]
     }
   ]

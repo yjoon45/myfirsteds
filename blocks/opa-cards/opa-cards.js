@@ -1,4 +1,7 @@
+import { isUniversalEditorActive } from '../../scripts/scripts.js';
+
 export default function decorate(block) {
+  if (isUniversalEditorActive()) return;
   const rows = [...block.children];
   const Strong = block.querySelectorAll('strong');
   // Wrap all children of strong elements inside <nobr>
@@ -12,10 +15,11 @@ export default function decorate(block) {
     const parent = strongElement.parentNode;
     if (parent) parent.insertBefore(br, strongElement.nextSibling);
   });
+
   // Process each row to determine card type and structure
   const itemRows = rows.slice(0);
   itemRows.forEach((row) => {
-    const [carddiv, imagediv, contentdiv, buttondiv] = [...row.children];
+    const [carddiv, imagediv, , contentdiv, buttondiv] = [...row.children];
     const cardtype = carddiv.textContent.trim().toLowerCase();
     if (cardtype === 'text-only') {
       const Title = contentdiv.querySelector('p');
@@ -28,6 +32,7 @@ export default function decorate(block) {
       const Image = imagediv.querySelector('picture');
       const Title = contentdiv.querySelector('p');
       const buttoncell = buttondiv.querySelectorAll(':scope > p');
+
       // Only process if we have at least 3 paragraph cells (link, text, style)
       if (buttoncell.length >= 3) {
         const buttonlinkelement = buttoncell[0].querySelector('a');

@@ -110,10 +110,6 @@
               "value": "opaf-care-connect"
             },
             {
-              "name": "OPAF Care Connect (FAQ)",
-              "value": "opaf-care-connect-faq"
-            },
-            {
                 "name": "Inline",
                 "value": "inline"
             },
@@ -156,6 +152,18 @@
             {
               "name": " Are you a patient right section",
               "value": "are-you-a-patient-right-section"
+            },
+            {
+              "name": "Patient Forms",
+              "value": "patient-forms"
+            },
+            {
+              "name": "Want To Apply Online Left Section",
+              "value": "want-to-apply-online-left-section"
+            },
+            {
+              "name": "Want To Apply Online Right Section",
+              "value": "want-to-apply-online-right-section"
             }
           ]
         }
@@ -182,6 +190,7 @@
         "flip-cards",
         "fragment",
         "hero",
+        "hero-banner",
         "otsuka-button",
         "image",
         "scrolling-timeline",
@@ -197,7 +206,6 @@
         "video",
         "opa-accordion",
         "opa-tabs",
-        "download-cards",
         "opa-cards"
       ]
     }

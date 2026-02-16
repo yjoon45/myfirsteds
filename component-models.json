@@ -884,6 +884,65 @@
     ]
   },
   {
+    "id": "opa-card",
+    "fields": [
+      {
+        "component": "select",
+        "name": "card-type",
+        "label": "Card Type",
+        "options": [
+          {
+            "name": "Text Only",
+            "value": "text-only"
+          },
+          {
+            "name": "White Button download",
+            "value": "white-button-download"
+          },
+          {
+            "name": "Info Card",
+            "value": "opa-info-card"
+          }
+        ]
+      },
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Text",
+        "valueType": "string"
+      },
+      {
+        "component": "aem-content",
+        "name": "cta_link",
+        "label": "Link"
+      },
+      {
+        "component": "text",
+        "name": "cta_text",
+        "label": "Button Text"
+      },
+      {
+        "component": "select",
+        "name": "cta_style",
+        "label": "Button Style",
+        "options": [
+          {
+            "name": "White Button download",
+            "value": "white-button-download"
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "opa-tab",
     "fields": [
       {

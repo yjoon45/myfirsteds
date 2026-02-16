@@ -197,7 +197,8 @@
         "video",
         "opa-accordion",
         "opa-tabs",
-        "download-cards"
+        "download-cards",
+        "opa-cards"
       ]
     }
   ]

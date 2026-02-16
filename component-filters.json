@@ -39,7 +39,8 @@
       "video",
       "opa-accordion",
       "opa-tabs",
-      "download-cards"
+      "download-cards",
+      "opa-cards"
     ]
   },
   {
@@ -97,6 +98,13 @@
     "id": "opa-accordion",
     "components": [
       "opa-accordion-item"
+    ]
+  },
+  {
+    "id": "opa-cards",
+    "components": [
+      "opa-card",
+      "otsuka-button"
     ]
   },
   {

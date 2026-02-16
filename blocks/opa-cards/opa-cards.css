@@ -237,7 +237,7 @@ a.button.white-button-download::after {
 
   /* authoring editor styles */
   &[data-aue-component] {
-    div:nth-child(3) {
+    div:nth-child(4) {
       & > p,
       & > p > div {
         display: contents;

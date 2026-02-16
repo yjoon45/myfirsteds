@@ -40,11 +40,10 @@ export default function decorate(block) {
       if (buttoncell.length >= 3) {
         const buttonlinkelement = buttoncell[0].querySelector('a');
         const buttonlink = buttonlinkelement?.getAttribute('href');
-        const buttontext = buttoncell[1].textContent.trim();
         const buttonstyle = buttoncell[2].textContent.trim();
         const buttonwrap = document.createElement('a');
         buttonwrap.href = buttonlink;
-        buttonwrap.textContent = buttontext;
+        buttonwrap.innerHTML = buttoncell[1].innerHTML;
         buttonwrap.className = `button ${buttonstyle}`;
         // Clear the button div and append the new anchor
         buttondiv.innerHTML = '';

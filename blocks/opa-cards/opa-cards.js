@@ -53,6 +53,9 @@ export default function decorate(block) {
         row.innerHTML = '';
         row.appendChild(anchorwrap);
       }
+    } else {
+      carddiv.parentNode.classList.add(cardtype);
+      carddiv.innerHTML = '';
     }
   });
 }

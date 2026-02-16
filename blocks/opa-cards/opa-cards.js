@@ -19,7 +19,7 @@ export default function decorate(block) {
   // Process each row to determine card type and structure
   const itemRows = rows.slice(0);
   itemRows.forEach((row) => {
-    const [carddiv, imagediv, , contentdiv, buttondiv] = [...row.children];
+    const [carddiv, imagediv, , contentdiv, buttondiv, wrawithlink] = [...row.children];
     const cardtype = carddiv.textContent.trim().toLowerCase();
     if (cardtype === 'text-only') {
       const Title = contentdiv.querySelector('p');
@@ -32,6 +32,9 @@ export default function decorate(block) {
       const Image = imagediv.querySelector('picture');
       const Title = contentdiv.querySelector('p');
       const buttoncell = buttondiv.querySelectorAll(':scope > p');
+      const isWrapWithLink = wrawithlink.textContent === 'true';
+
+      wrawithlink.innerHTML = '';
 
       // Only process if we have at least 3 paragraph cells (link, text, style)
       if (buttoncell.length >= 3) {
@@ -45,18 +48,23 @@ export default function decorate(block) {
         buttonwrap.className = `button ${buttonstyle}`;
         // Clear the button div and append the new anchor
         buttondiv.innerHTML = '';
-        const anchorwrap = document.createElement('a');
-        anchorwrap.href = buttonlink;
-        anchorwrap.className = 'card-link';
-        if (Image) {
-          anchorwrap.appendChild(Image);
+
+        if (isWrapWithLink) {
+          const anchorwrap = document.createElement('a');
+          anchorwrap.href = buttonlink;
+          anchorwrap.className = 'card-link';
+          if (Image) {
+            anchorwrap.appendChild(Image);
+          } else {
+            anchorwrap.classList.add('no-image');
+          }
+          anchorwrap.appendChild(Title);
+          anchorwrap.appendChild(buttonwrap);
+          row.innerHTML = '';
+          row.appendChild(anchorwrap);
         } else {
-          anchorwrap.classList.add('no-image');
+          row.appendChild(buttonwrap);
         }
-        anchorwrap.appendChild(Title);
-        anchorwrap.appendChild(buttonwrap);
-        row.innerHTML = '';
-        row.appendChild(anchorwrap);
       }
 
       carddiv.parentNode.classList.add(cardtype);

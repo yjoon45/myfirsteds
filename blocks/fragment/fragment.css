@@ -30,7 +30,7 @@
     }
   }
 
-.care-connect-faq .download-cards {
+.care-connect-faq .opa-cards {
   gap: 32px;
   flex-flow: column nowrap;
   max-width: unset;
@@ -43,7 +43,7 @@
   }
 }
 
-.care-connect-faq .download-card {
+.care-connect-faq .opa-card {
   @media (width > 992px) {
     width: calc(50% - 12px);
     flex: 0 0 auto;

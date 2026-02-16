@@ -218,7 +218,7 @@ a.button.white-button-download::after {
     color: var(--link-color);
   }
 
-  div:nth-child(3) {
+  div:nth-child(4) {
     display: flex;
     align-items: center;
     gap: 20px;

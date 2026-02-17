@@ -1136,7 +1136,7 @@ main .section.opaf-care-connect {
     .section.are-you-a-patient-left-section {
         float: left;
         width: 50%;
-        margin: 0 auto;
+        margin: 0 auto 60px;
         padding-top: 2.5625rem;
         padding-bottom: 3.5rem;
         padding-left: calc(100vw / 2 - 38rem);
@@ -1159,7 +1159,7 @@ main .section.opaf-care-connect {
         float: right;
         width: 50%;
         margin-top: 0;
-        margin-bottom: 0;
+        margin-bottom: 60px;
         padding-top: 2.5625rem;
         padding-bottom: 3.7rem;
         padding-left: 0;

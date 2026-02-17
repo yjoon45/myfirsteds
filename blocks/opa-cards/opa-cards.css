@@ -248,6 +248,10 @@ a.button.white-button-download::after {
 
 /* End: OPA Info Card  */
 
+.opa-cards-container {
+  clear: both;
+}
+
 /* Start: care connect faq */
 .opa-cards div[class*='care-connect-faq-card-'] {
   padding: 24px 32px;

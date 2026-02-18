@@ -1,5 +1,5 @@
 footer {
-    font-family: "Museo Sans", sans-serif;
+    font-family: 'Museo Sans', sans-serif;
     color: #fff;
     font-size: 0.75rem;
     line-height: 1.05rem;
@@ -151,7 +151,7 @@ footer .middle {
         justify-content: left;
         margin-left: auto;
     }
-    
+
     .footer .section.top .main-menu li:nth-child(1) {
         text-align: left;
         padding: 0.1875rem 1.25rem 0.1875rem 0;
@@ -161,9 +161,9 @@ footer .middle {
         margin-top: 2rem;
         padding-bottom: 2rem;
     }
-    
+
     .footer .section.middle p {
-        font-family: "Museo Sans", sans-serif;
+        font-family: 'Museo Sans', sans-serif;
         color: #fff;
         font-size: 0.75rem;
         line-height: 1.05rem;
@@ -178,24 +178,24 @@ footer .middle {
         display: flex;
         flex-flow: column-reverse;
     }
-    
+
     .footer .section.middle {
         margin: 1.25rem 0;
         text-align: left;
     }
-    
+
     .footer .section.bottom {
         color: #fff;
         font-size: 0.75rem;
         font-weight: 400;
         letter-spacing: normal;
     }
-    
+
     .footer .section.bottom .prc {
         justify-content: flex-start;
         display: flex;
     }
-    
+
     .footer .section.bottom .prc .prc-date {
         margin-left: 0;
     }
@@ -285,6 +285,40 @@ footer .middle {
     }
 }
 
+/* message us button */
+.message-button {
+    position: fixed;
+    right: 0.5rem;
+    bottom: 10%;
+    z-index: 13;
+    width: 98px;
+    height: 98px;
+    background-color: transparent;
+    background-image: url("../../icons/message-icon.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.message-button:hover,
+.message-button:focus {
+    background-color: transparent;
+}
+
+@media (width >= 768px) {
+    .message-button {
+        right: 2.5rem;
+    }
+}
+
+@media (width >= 1400px) {
+    .message-button {
+        right: calc(50% - 680px);
+        width: 115px;
+        height: 115px;
+    }
+}
+
 /* Back to Top Button */
 .back-to-top-buttons {
     position: fixed;
@@ -303,7 +337,7 @@ footer .middle {
 }
 
 .back-to-top-buttons .back-to-top-button__oval {
-    font-family: "Museo Sans", sans-serif;
+    font-family: 'Museo Sans', sans-serif;
     font-family: var(--f-f-body);
     color: #fff;
     color: var(--c-text-inverse);
@@ -315,13 +349,16 @@ footer .middle {
     width: 3.125rem;
     height: 3.125rem;
     background-color: #4a6cb3;
-    background-image: url("../../icons/top-arrow-white.svg");
+    background-image: url('../../icons/top-arrow-white.svg');
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease, transform 0.3s ease;
+    transition:
+        opacity 0.5s ease,
+        visibility 0.5s ease,
+        transform 0.3s ease;
     display: inline-block;
     appearance: auto;
     overflow: visible;
@@ -360,7 +397,7 @@ footer .middle {
 }
 
 .back-to-top-buttons .back-to-top-button__square {
-    font-family: "Museo Sans", sans-serif;
+    font-family: 'Museo Sans', sans-serif;
     font-family: var(--f-f-body);
     color: #fff;
     color: var(--c-text-inverse);

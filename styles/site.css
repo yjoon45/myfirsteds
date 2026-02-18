@@ -12,6 +12,8 @@
     --opaf-border: #212529;
     --supported-brand-text: #383d41;
     --opaf-care-connect-text: #2b4c8b;
+    --opaf-color-blue: #426bba;
+    --opaf-color-gray: #434343;
     --anchor-text-color: #426bba;
 
     /* fonts */
@@ -553,7 +555,7 @@ main > .section > div {
 }
 
 .supported-brands-component .default-content-wrapper p a {
-   color: var(--anchor-text-color) ;
+    color: var(--anchor-text-color);
 }
 
 .supported-brands-component
@@ -1043,89 +1045,103 @@ main .section.opaf-care-connect {
     line-height: 2.0938rem;
 }
 
-/** Privacy policy page start **/
-.page-privacy-policy main > .section {
-    margin: 0;
-}
+/* -----------------------------------------
+   Start: Privacy Policy Page
+------------------------------------------ */
+.page-privacy-policy {
+    /* Typography defaults */
+    p,
+    ul li,
+    ol li a,
+    h2,
+    h3,
+    h4 {
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--supported-brand-text);
+        margin: 0;
+    }
 
-.page-privacy-policy main > .section > div {
-    padding-left: 32px;
-    padding-right: 32px;
-}
+    h2,
+    h3,
+    h4 {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 20px;
+    }
 
-@media (width >=1200px) {
-    .page-privacy-policy main > .section > div {
-        max-width: 1264px;
+    /* Main content spacing */
+    main > .section {
+        margin: 0;
+    }
+
+    main > .section > div {
+        padding: 0 15px;
+    }
+
+    /* Large Screens */
+    @media (width >= 1200px) {
+        main > .section > div {
+            max-width: 1264px;
+            padding: 0 32px;
+        }
+    }
+
+    /* Headings */
+    main > .section h1 {
+        color: var(--opaf-care-connect-text);
+        margin: 12px 0 28px;
+    }
+
+    h2#table-of-contents {
+        font-size: 32px;
+        color: var(--supported-brand-text);
+        margin-bottom: 0;
+    }
+
+    /* Ordered lists */
+    ol {
+        padding: 0;
+        margin: 0;
+    }
+
+    ol ol {
+        padding-left: 40px;
+    }
+
+    ol li {
+        list-style: none;
+        line-height: 26px;
+    }
+
+    ol li p {
+        margin: 0;
+    }
+
+    ol li a {
+        text-decoration: none;
+        color: var(--anchor-text-color);
+    }
+
+    /* Unordered lists */
+    ul li {
+        margin-bottom: 16px;
+
+        @media (width <= 1200px) {
+            margin-bottom: 8px;
+        }
+    }
+
+    /* Icons */
+    .icon {
+        width: 100px;
+        height: 49px;
     }
 }
 
-.page-privacy-policy main > .section h1 {
-    color: var(--opaf-care-connect-text);
-    margin-top: 12px;
-    margin-bottom: 28px;
-}
-
-.page-privacy-policy main > .section h2#table-of-contents {
-    font-size: 32px;
-    color: var(--supported-brand-text);
-    margin-bottom: 0;
-}
-
-.page-privacy-policy ol {
-    padding: 0;
-    margin: 0;
-}
-
-.page-privacy-policy ol ol {
-    padding-left: 40px;
-}
-
-.page-privacy-policy ol li {
-    list-style: none;
-    line-height: 26px;
-}
-
-.page-privacy-policy ol li p {
-    margin: 0;
-}
-
-.page-privacy-policy ol li a {
-    color: var(--anchor-text-color);
-    font-size: 14px;
-    line-height: 20px;
-    text-decoration: none;
-}
-
-.page-privacy-policy ul li {
-    font-size: 14px;
-    line-height: 20px;
-    color: var(--supported-brand-text);
-    margin-bottom: 16px;
-}
-
-.page-privacy-policy p {
-    font-size: 14px;
-    line-height: 22px;
-    color: var(--supported-brand-text);
-    margin-bottom: 0;
-}
-
-.page-privacy-policy h2,
-.page-privacy-policy h3,
-.page-privacy-policy h4 {
-    font-size: 20px;
-    line-height: 28px;
-    margin-bottom: 0;
-    margin-top: 0;
-    color: var(--supported-brand-text);
-}
-
-.page-privacy-policy .icon {
-    height: 49px;
-    width: 100px;
-}
-
-/** Privacy policy page end **/
+/* -----------------------------------------
+   END: Privacy Policy Page
+------------------------------------------ */
 
 @media (width >=992px) {
     main > .section.are-you-a-patient-left-section > div {
@@ -1136,7 +1152,7 @@ main .section.opaf-care-connect {
     .section.are-you-a-patient-left-section {
         float: left;
         width: 50%;
-        margin: 0 auto 60px;
+        margin: 0 auto;
         padding-top: 2.5625rem;
         padding-bottom: 3.5rem;
         padding-left: calc(100vw / 2 - 38rem);
@@ -1159,7 +1175,7 @@ main .section.opaf-care-connect {
         float: right;
         width: 50%;
         margin-top: 0;
-        margin-bottom: 60px;
+        margin-bottom: 0;
         padding-top: 2.5625rem;
         padding-bottom: 3.7rem;
         padding-left: 0;
@@ -1674,3 +1690,149 @@ ol {
 }
 
 /* END: WANT TO APPLY ONLINE */
+
+/* START: Patients can download forms section */
+
+.apply-for-yourself .section.video-container.columns-container
+  .default-content-wrapper:first-of-type h1 {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 3.4699rem;
+  text-align: center;
+  color: var(--bg-color-blue);
+  margin-bottom: 2rem;
+}
+
+.apply-for-yourself .section.video-container.columns-container p {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.4rem;
+  text-align: center;
+  color: var(--supported-brand-text);
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  > .video-wrapper + .default-content-wrapper h2 {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  text-align: center;
+  color: var(--opaf-color-blue);
+  margin-bottom: 2.5rem;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper .columns.block.columns-3-cols > div > div > h3 {
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.0156rem;
+  line-height: 3rem;
+  text-align: start;       
+  color: var(--opaf-color-gray);
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.apply-for-yourself .section.video-container.columns-container {
+  padding: 2.5rem 2rem;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  > .default-content-wrapper,
+.apply-for-yourself .section.video-container.columns-container
+  > .video-wrapper,
+.apply-for-yourself .section.video-container.columns-container
+  > .columns-wrapper {
+  margin-inline: auto;
+  box-sizing: border-box;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper + .default-content-wrapper > p:last-of-type {
+  text-align: left;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .default-content-wrapper:first-of-type p {
+     margin-bottom: 2.5rem; 
+    }
+
+.apply-for-yourself .section.video-container.columns-container
+  .video-wrapper {
+     margin-bottom: 4rem; 
+    }
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper {
+     margin-bottom: 2.5rem; 
+    }
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper .columns.block.columns-3-cols > div > div p {
+  text-align: left; 
+  text-align: start;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper .columns.block.columns-3-cols > div {
+  gap: 1.25rem;
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper .columns.block.columns-3-cols > div > div {
+  display: flex;          
+  flex-direction: column; 
+  align-self: stretch;     
+  box-sizing: border-box;
+  padding: 1.4rem 3rem;   
+  border-left: 0.0417rem solid var(--supported-brand-text);
+}
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper + .default-content-wrapper p {
+  margin-bottom: 2.5rem;
+}
+
+@media (width >= 48em) {
+  .apply-for-yourself .section.video-container.columns-container
+    > .default-content-wrapper:first-of-type {
+    padding-inline: 0.9375rem;
+  }
+
+}
+
+@media (width >= 62em) {
+  .apply-for-yourself .section.video-container.columns-container
+    > .default-content-wrapper:first-of-type h1,
+  .apply-for-yourself .section.video-container.columns-container
+    > .default-content-wrapper:first-of-type p {
+    max-width: 33.625rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .apply-for-yourself .section.video-container.columns-container
+    > .video-wrapper + .default-content-wrapper h2 {
+    max-width: 32.375rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+.apply-for-yourself .section.video-container.columns-container
+    .columns-wrapper .columns.block.columns-3-cols > div {
+    max-width: 67.125rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 3rem; 
+  }
+
+.apply-for-yourself .section.video-container.columns-container
+  .columns-wrapper + .default-content-wrapper > p:last-of-type {
+  text-align: center;
+}
+}

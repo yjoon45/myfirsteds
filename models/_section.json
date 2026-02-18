@@ -205,7 +205,7 @@
         "slides",
         "video",
         "opa-accordion",
-        "opa-tabs",
+        "opa-tabs" ,
         "opa-cards"
       ]
     }

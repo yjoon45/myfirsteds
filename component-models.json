@@ -135,6 +135,10 @@
             "value": "cream-white"
           },
           {
+            "name": "Ice to Baby Blue (Backgound)",
+            "value": "ice-to-baby-blue"
+          },
+          {
             "name": "Supported Brands Component",
             "value": "supported-brands-component"
           },
@@ -429,6 +433,31 @@
         "label": "Source URL",
         "multi": false,
         "rootPath": "/content/dam/otsuka-xwalk-boilerplate"
+      }
+    ]
+  },
+  {
+    "id": "board-card",
+    "fields": [
+      {
+        "component": "reference",
+        "valueType": "string",
+        "name": "image",
+        "label": "Board Card Image",
+        "multi": false
+      },
+      {
+        "component": "richtext",
+        "name": "text",
+        "value": "",
+        "label": "Board Card Text",
+        "valueType": "string"
+      },
+      {
+        "name": "target",
+        "component": "text",
+        "label": "Data Target",
+        "valueType": "string"
       }
     ]
   },

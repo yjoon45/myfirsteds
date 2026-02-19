@@ -811,6 +811,7 @@ export default async function decorate(block) {
       mobileLogoImg.src = '/icons/site-logo-mobile.svg';
       mobileLogoImg.alt = 'Nav Logo';
       mobileLogoImg.className = 'logo-mobile';
+      mobileLogoImg.fetchPriority = 'high';
 
       // Function to update logo based on screen size
       const updateLogoForScreenSize = () => {

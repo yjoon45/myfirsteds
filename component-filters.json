@@ -40,6 +40,7 @@
       "video",
       "opa-accordion",
       "opa-tabs",
+      "board-cards",
       "opa-cards"
     ]
   },
@@ -53,6 +54,12 @@
     "id": "audio",
     "components": [
       "source"
+    ]
+  },
+  {
+    "id": "board-cards",
+    "components": [
+      "board-card"
     ]
   },
   {

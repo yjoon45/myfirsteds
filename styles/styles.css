@@ -45,11 +45,18 @@ body.appear {
   display: block;
 }
 
-/*
+/* Reserve header space to prevent CLS */
 header {
-  height: var(--nav-height);
+  min-height: var(--nav-height);
 }
-*/
+
+/* Mobile: header is taller due to contact bar */
+@media (width <= 1199px) {
+  header {
+    min-height: 130px;
+  }
+}
+
 header .header,
 footer .footer {
   visibility: hidden;

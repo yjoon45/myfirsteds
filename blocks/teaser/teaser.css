@@ -30,12 +30,14 @@
 }
 
 .teaser .body-text {
-  font-family: var(--body-font-family);
-  color: var(--text-color);
+  font-family: var(--font-family-primary, "Museo Sans");
+  font-size: var(--body-font-size-xs, 14px);
+  color: var(--supported-brand-text, #383D41);
 }
 
 .teaser .body-text p {
   margin: 0;
+  max-width: 100%;
 }
 
 .teaser .link .button {
@@ -124,6 +126,7 @@
 .teaser.icon-teaser .content {
   align-items: center;
   gap: 0;
+  max-width: 200px;
 }
 
 .teaser.icon-teaser .title {
@@ -167,6 +170,27 @@ main > .section.inline:has(.teaser-wrapper) {
 
 main > .section.inline:has(.teaser-wrapper) > .teaser-wrapper {
   height: 100%;
+}
+
+/* Responsive: Set teaser-wrappers in inline sections to 674px at 991px and below */
+@media (width <= 991px) {
+  main > .section.inline:has(.teaser-wrapper) {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 674px));
+  }
+
+  main > .section.inline:has(.teaser-wrapper) > .teaser-wrapper {
+    max-width: 674px;
+    width: 100%;
+  }
+
+  /* Override icon-teaser and notification-box max-widths */
+  main > .section.inline .teaser.icon-teaser.notification-box {
+    max-width: 674px;
+  }
+
+  main > .section.inline .teaser-wrapper:has(.teaser.width-m) {
+    max-width: 674px;
+  }
 }
 
 .teaser-wrapper {
@@ -258,6 +282,10 @@ main > .section.inline:has(.teaser-wrapper) > .teaser-wrapper {
   padding: 32px;
   max-width: 436px;
   box-shadow: 0 0 26.76px 0 rgb(0 0 0 / 8%);
+}
+
+.teaser.icon-teaser.notification-box .content {
+  max-width: 436px;
 }
 
 .teaser.icon-teaser.notification-box .title {

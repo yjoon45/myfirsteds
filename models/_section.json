@@ -98,6 +98,10 @@
               "value": "cream-white"
             },
             {
+              "name": "Ice to Baby Blue (Backgound)",
+              "value": "ice-to-baby-blue"
+            },
+            {
               "name": "Supported Brands Component",
               "value": "supported-brands-component"
             },
@@ -206,6 +210,7 @@
         "video",
         "opa-accordion",
         "opa-tabs" ,
+        "board-cards",
         "opa-cards"
       ]
     }

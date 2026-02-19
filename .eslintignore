@@ -4,3 +4,5 @@ alpine.min.js
 faintly.js
 faintly-debug.js
 plugins/
+jquery.min.js
+slick.min.js

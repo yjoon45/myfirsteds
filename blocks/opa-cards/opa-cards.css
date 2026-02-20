@@ -260,7 +260,7 @@ a.button.white-button-download::after {
 
   @media (width > 768px) {
     display: flex;
-    padding: 40px 48px;
+    padding: 40px 48px 48.5px;
     flex-direction: column;
   }
 
@@ -271,7 +271,7 @@ a.button.white-button-download::after {
 
   h4 {
     letter-spacing: 0.2px;
-    margin-block: 0 23px;
+    margin-block: 9px 23px;
     font-size: 20px;
     line-height: 1.4em;
     font-weight: 600;
@@ -294,7 +294,7 @@ a.button.white-button-download::after {
   }
 
   p {
-    margin: 0 0 17px;
+    margin: 0 0 24px;
     font-size: 14px;
     line-height: 1.6em;
   }
@@ -305,12 +305,13 @@ a.button.white-button-download::after {
 }
 
 a.button[class*='button-rounded-'] {
-  padding: 0 25px;
+  padding: 3px 22px 0 23px;
   margin: 0;
   height: 39.5px;
   display: flex;
   align-items: center;
   justify-content: center;
+  line-height: normal;
   gap: 8px;
   width: 100%;
   background-color: #426bba;
@@ -325,6 +326,7 @@ a.button[class*='button-rounded-'] {
     width: 20px;
     height: 20px;
     padding: 3px;
+    margin-bottom: 5px;
 
     @media (width < 992px) {
       transform: rotate(90deg);

@@ -61,6 +61,7 @@
   &:hover,
   &:focus {
     background-color: var(--supported-brand-text);
+    color: #fff;
 
     .hero-banner__button-icon {
       filter: brightness(0) invert(1);
@@ -139,7 +140,7 @@
     top: 0;
     left: 0;
     height: 100%;
-    padding: 9.5rem 0.9375rem;
+    padding: 9.5rem 15px;
   }
 
   .hero-banner .hero-banner__title {
@@ -168,8 +169,12 @@
   }
 
    .hero-banner .hero-banner__content.alternate{
-    padding: 4.128rem 0;
-    max-width: 466px;
+    padding: 4.128rem 32px;
+    max-width: 530px;
+
+    & > div {
+      max-width: 466px;
+    }
   }
 
   .hero-banner .hero-banner__images.alternate img {
@@ -180,19 +185,16 @@
 
 /* Large Desktop */
 @media (width > 1200px) {
-  .hero-banner .hero-banner__content.alternate {
-    margin-left: calc((100vw - 1200px - 16px) / 2);
-    margin-right: calc((100vw - 1200px - 16px) / 2);
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
-/* Large Desktop */
-@media (width > 1230px) {
+  .hero-banner .hero-banner__content.alternate,
   .hero-banner .hero-banner__content {
-    margin-left: calc((100vw - 1230px - 16px) / 2);
-    margin-right: calc((100vw - 1230px - 16px) / 2);
+    margin-inline: auto;
+    max-width: 1264px;
+    right: 0;
   }
 }
 
+@media (width > 1201px) {
+  .hero-banner .hero-banner__content {
+    padding-inline: 28px;
+  }
+}

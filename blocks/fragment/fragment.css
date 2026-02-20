@@ -12,7 +12,7 @@
     padding-inline: 0;
 
     @media (width > 992px) {
-      max-width: 1026px;
+      max-width: 1020px;
     }
   }
 }

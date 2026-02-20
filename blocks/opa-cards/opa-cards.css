@@ -297,9 +297,13 @@ a.button.white-button-download::after {
     margin: 0 0 24px;
     font-size: 14px;
     line-height: 1.6em;
+
+    &:has(.button) {
+      margin-bottom: 0;
+    }
   }
 
-  .button {
+  div:has(.button) {
     margin-top: auto;
   }
 }
@@ -348,7 +352,8 @@ a.button[class*='button-rounded-'] {
   }
 
   &:is(:hover, :focus) {
-    background-color: var(--supported-brand-text);
+    background-color: var(--supported-brand-text) !important;
+    border: 2px solid transparent !important;
 
     & > .icon {
       filter: brightness(0) invert(1);
